@@ -1,6 +1,7 @@
 const { PI } = require('../constants');
 const helpers = require('../helpers');
 
+//Newtonian flow through a straight circular pipe
 function simpleFlowCalculation(diameter, velocity){
     if (diameter == undefined || diameter == '') {
         throw new Error('Diameter ' + helpers.validateParameterMessage(diameter));
