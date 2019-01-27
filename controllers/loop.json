@@ -1,0 +1,32 @@
+{
+    "Loop 1" : {
+        "BA": {
+            "pipeLength": 800,
+            "diameter" : 255,
+            "roughness" : 100,
+            "flowDirection" : 1,
+            "flowGuess" : 0.09
+        },
+        "CB" : {
+            "pipeLength": 1500,
+            "diameter": 455,
+            "roughness": 100,
+            "flowDirection": 1,
+            "flowGuess": 0.18
+        },
+        "CD" : {
+            "pipeLength": 1000,
+            "diameter": 405,
+            "roughness": 100,
+            "flowDirection": -1,
+            "flowGuess": 0.16
+        },
+        "DA" : {
+            "pipeLength": 1100,
+            "diameter": 305,
+            "roughness": 100,
+            "flowDirection": -1,
+            "flowGuess": 0.07
+        }
+    }
+}

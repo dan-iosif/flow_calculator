@@ -1,5 +1,5 @@
 const { PI } = require('../constants');
-const helpers = require('../helpers');
+const helpers = require('../helpers/helpers');
 
 //Newtonian flow through a straight circular pipe
 function simpleFlowCalculation(diameter, velocity){

@@ -3,14 +3,16 @@ const router = express.Router();
 const bodyParser = require('body-parser');
 const {simpleFlowCalculation} = require('../middleware/flowCalculation');
 const {headLossCalculation} = require('../middleware/headLossCalculation');
+const {parseRequest} = require('../middleware/parseRequest');
+const {startCalculation} = require('../middleware/hardyCross');
 
 router.use(bodyParser.urlencoded({ extended: false }));
+router.use(bodyParser.json());
 
 router.get('/about', function(req, res) {
     res.send('About this application.');
 })
 
-//define the flow calculation route
 router.post('/simple-flow', function (req, res) {
     let diameter = req.body.diameter;
     let velocity = req.body.velocity;
@@ -30,5 +32,10 @@ router.post('/hazen-williams', function(req,res) {
     res.send({headLoss: headLoss});
 })
 
+router.post('/hardy-cross', function(req, res){
+    let body = req.body;
+    var pipeObjects = parseRequest(body);
+    var answer = startCalculation(pipeObjects);
+})
 
 module.exports = router;
